@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Main Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #ffffff;
+      padding: px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .logo {
+      margin-bottom: 20px;
+    }
+    .menu {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      margin: 20px;
+    }
+    .menu li {
+      margin-right: 300px; /* 메뉴 버튼 사이의 간격 조절 */
+    }
+    .menu-item a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    
+    .menu li:last-child {
+      margin-right: 0; 
+    }
+
+
+    </style>
+    <script>
+      const imagesToPreload = [
+      'https://drive.google.com/uc?id=1ey8Lry_g-g_jnSXVlhE48yAmxMNbyJGN',
+      'https://drive.google.com/uc?id=1fPqPiGZ1REcPb-XW6FHlPFiXTGfHfxV8',
+      'https://drive.google.com/uc?id=1NjYjbB6uqCZGdkBiHZHYVD6SDvDWEyQy',
+      'https://drive.google.com/uc?id=107UTnfrxI_Ab5BgtaL2JcoIfeE682bs6'
+    ];
+
+    const preloadedImages = [];
+    for (let i = 0; i < imagesToPreload.length; i++) {
+      const img = new Image();
+      img.src = imagesToPreload[i];
+      preloadedImages.push(img);
+    }
+
+
+      
+      window.onload = function() {
+        const menu1 = document.getElementById('menu1');
+        const menu2 = document.getElementById('menu2');
+
+        
+    
+        menu1.addEventListener('mouseover', () => {
+          menu1.src = 'https://drive.google.com/uc?id=1ey8Lry_g-g_jnSXVlhE48yAmxMNbyJGN';
+        });
+    
+        menu1.addEventListener('mouseout', () => {
+          menu1.src = 'https://drive.google.com/uc?id=1fPqPiGZ1REcPb-XW6FHlPFiXTGfHfxV8';
+        });
+        
+        menu2.addEventListener('mouseover', () => {
+          menu2.src = 'https://drive.google.com/uc?id=1NjYjbB6uqCZGdkBiHZHYVD6SDvDWEyQy';
+        });
+    
+        menu2.addEventListener('mouseout', () => {
+          menu2.src = 'https://drive.google.com/uc?id=107UTnfrxI_Ab5BgtaL2JcoIfeE682bs6';
+        });
+      };
+    </script>
+  
+
+</head>
+<body>
+  <header class="sticky">
+    <h1>
+      <img src="https://drive.google.com/uc?id=1MHaCpG2Z9JKMapKzXTLpDBaeX25TcrzC" width="800" class="logo-image">
+    </h1>
+    <!-- 내비게이션, 메뉴 등 추가 -->
+    <nav>
+      <ul class="menu">
+        <li class="menu-item"><a href="#"><img src="https://drive.google.com/uc?id=1fPqPiGZ1REcPb-XW6FHlPFiXTGfHfxV8" height="40" id="menu1" style="border: none;"></a></li>
+        <li class="menu-item"><a href="#"><img src="https://drive.google.com/uc?id=107UTnfrxI_Ab5BgtaL2JcoIfeE682bs6" height="40" id="menu2" style="border: none;"></a></li>
+        <!-- 필요한 만큼 메뉴 항목 추가 -->
+        <!-- 필요한 만큼 메뉴 항목 추가 -->
+      </ul>
+    </nav>
+  </header>
+
+</body>
+</html>
