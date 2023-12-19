@@ -25,9 +25,10 @@
       justify-content: center;
       align-items: center;
       padding: 0px;
-      margin: 100;
-
-
+      margin: 20px;
+    }
+    .menu li {
+      margin-right: 300px; /* 메뉴 버튼 사이의 간격 조절 */
     }
     .menu-item a {
       text-decoration: none;
@@ -36,7 +37,16 @@
       font-size: 18px;
     }
 
+    
+    .menu li:last-child {
+      margin-right: 0; /* 마지막 메뉴 버튼의 오른쪽 여백 제거 */
+    }
 
+    .video-wrapper video {
+  width: 100%; /* 비디오를 부모 요소에 맞게 가득 채우도록 설정 */
+  height: 100%; /* 부모 요소의 높이를 100%로 설정 */
+  object-fit: cover; /* 가로세로 비율 유지하며 비디오가 잘리지 않고 부모 요소를 채우도록 설정 */
+}
     </style>
     <script>
       const imagesToPreload = [
@@ -89,8 +99,9 @@
     <!-- 내비게이션, 메뉴 등 추가 -->
     <nav>
       <ul class="menu">
-        <img src="https://drive.google.com/uc?id=1fPqPiGZ1REcPb-XW6FHlPFiXTGfHfxV8" height="40" id="menu1" style="border: none;"></a></li>
-        <img src="https://drive.google.com/uc?id=107UTnfrxI_Ab5BgtaL2JcoIfeE682bs6" height="40" id="menu2" style="border: none;"></a></li>
+        <li class="menu-item"><a href="#"><img src="https://drive.google.com/uc?id=1fPqPiGZ1REcPb-XW6FHlPFiXTGfHfxV8" height="40" id="menu1" style="border: none;"></a></li>
+        <li class="menu-item"><a href="#"><img src="https://drive.google.com/uc?id=107UTnfrxI_Ab5BgtaL2JcoIfeE682bs6" height="40" id="menu2" style="border: none;"></a></li>
+        <!-- 필요한 만큼 메뉴 항목 추가 -->
         <!-- 필요한 만큼 메뉴 항목 추가 -->
       </ul>
     </nav>
